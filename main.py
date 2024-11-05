@@ -22,7 +22,11 @@ some_str7 = some_str6[0:-2]
 print(some_str7)
 
 some_str8 = "Hello, World!"
-a = "Mike"
 print(some_str8.replace('World', a))
+a = "Mike"
+
+
+
+
 
 
