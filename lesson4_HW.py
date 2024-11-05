@@ -86,6 +86,7 @@ final_action = spl_zen_str.replace("is", "is not")
 # print(final_action.count("is not"))
 print("Отражение замененных вхождения на is not ниже:")
 print(final_action)
+# Thank you
 
 
 
