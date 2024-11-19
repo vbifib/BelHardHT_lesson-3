@@ -24,27 +24,28 @@ class Transport(ABC):
 
 #проверка =========================================================================
 # transport = Transport("Jeep", "Renegade", 2015, "Red")
-# print(Transport.mileage)
-# transport.move(10)
-# print(Transport.mileage)
-# transport.move(20)
-# print(Transport.mileage)
+# # print(Transport.mileage)
+# # transport.move(10)
+# # print(Transport.mileage)
+# # transport.move(20)
+# # print(Transport.mileage)
 # transport.move(-1)
-# print(Transport.mileage)
+# # print(Transport.mileage)
 #===================================================================================
 class Car(Transport):
     engine_type: str
 
     def __init__(self, brand, model, issue_year, color, engine_type):
-        super().__init__()
+        super().__init__(self, brand, model, issue_year, color)
         self.engine_type = engine_type
+
 
      def move(self, num_km):
          super().move()
          return f"{self.brand}, {self.model}, {self.color}, {self.issue_year},проехала {Transport.mileage} километров"
 
 car = Car("Jeep", "Renegade", 2015, "Red", "Petrol")
-car.move(1)
+# car.move(1)
 
 
 
