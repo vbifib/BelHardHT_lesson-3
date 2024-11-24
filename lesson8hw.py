@@ -22,36 +22,25 @@ class Transport(ABC):
         else:
             print("ValueError: Расстояние должно быть положительным числом")
 
-#проверка =========================================================================
-# transport = Transport("Jeep", "Renegade", 2015, "Red")
-# # print(Transport.mileage)
-# # transport.move(10)
-# # print(Transport.mileage)
-# # transport.move(20)
-# # print(Transport.mileage)
-# transport.move(-1)
-# # print(Transport.mileage)
-#===================================================================================
 class Car(Transport):
     engine_type: str
 
     def __init__(self, brand, model, issue_year, color, engine_type):
-        super().__init__(self, brand, model, issue_year, color)
+        super().__init__(brand, model, issue_year, color)
         self.engine_type = engine_type
 
+    def move(self, num_km):
+        super().move(num_km)
+        return f"{self.brand} {self.model} {self.color} {self.issue_year} проехала {Transport.mileage} километров"
 
-     def move(self, num_km):
-         super().move()
-         return f"{self.brand}, {self.model}, {self.color}, {self.issue_year},проехала {Transport.mileage} километров"
+class Airplane(Transport):
+    lifting_capacity: int
 
-car = Car("Jeep", "Renegade", 2015, "Red", "Petrol")
-# car.move(1)
+    def __init__(self, brand, model, issue_year, color, lifting_capacity):
+        super().__init__(brand, model, issue_year, color)
+        self.lifting_capacity = lifting_capacity
 
-
-
-
-
-
-
-
+    def move(self, num_km):
+        super().move(num_km)
+        return f"{self.brand} {self.model} {self.color} {self.issue_year} пролетел {Transport.mileage} километров"
 
